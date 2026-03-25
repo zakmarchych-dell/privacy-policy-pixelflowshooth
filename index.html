@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legale - PixelFlowShooth</title>
+    <style>
+        body { font-family: -apple-system, sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; color: #333; }
+        .tabs { display: flex; gap: 10px; margin-bottom: 30px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .tab-btn { padding: 10px 20px; cursor: pointer; border: none; background: #f0f0f0; border-radius: 5px; font-weight: bold; }
+        .tab-btn.active { background: #007bff; color: white; }
+        .content { display: none; }
+        .content.active { display: block; }
+        h1 { color: #000; }
+        .footer { margin-top: 40px; font-size: 0.8em; color: #888; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="showTab('privacy')">Privacy Policy</button>
+        <button class="tab-btn" onclick="showTab('terms')">Termini e Condizioni</button>
+    </div>
+
+    <div id="privacy" class="content active">
+        <h1>Informativa sulla Privacy</h1>
+        <p>L'app <strong>PixelFlowShooth</strong> rispetta la tua privacy...</p>
+        <p>Utilizziamo servizi di terze parti come: <b>Google Play Services, AdMob, Firebase</b>.</p>
+        </div>
+
+    <div id="terms" class="content">
+        <h1>Termini e Condizioni</h1>
+        <p>Scaricando PixelFlowShooth accetti i seguenti termini...</p>
+        <p>L'app viene fornita "così com'è" senza garanzie di alcun tipo.</p>
+        </div>
+
+    <div class="footer">
+        Contatti: <strong>[TUA EMAIL]</strong><br>
+        &copy; 2026 PixelFlowShooth
+    </div>
+
+    <script>
+        function showTab(id) {
+            document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>

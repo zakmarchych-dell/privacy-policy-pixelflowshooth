@@ -1,1 +1,1 @@
-# privacy-policy-pixelflowshooth
+# privacy-policy-pixelflowshooth/terms
